@@ -37,21 +37,62 @@ struct ContentView: View {
                 List{
                     
                     Group{
-                        Text("Lap 5")
-                            .listRowSeparatorTint(Color("Dark Gray"))
-                        Text("Lap 4")
-                            .listRowSeparatorTint(Color("Dark Gray"))
-                            .foregroundColor(.red)
-                        Text("Lap 3")
-                            .listRowSeparatorTint(Color("Dark Gray"))
-                            .foregroundColor(.green)
-                        Text("Lap 2")
-                            .listRowSeparatorTint(Color("Dark Gray"))
-                        Text("Lap 1")
-                            .listRowSeparatorTint(Color("Dark Gray"))
+                        HStack{
+                            Text("Lap 5")
+                                .font(Font.custom("", size: 20))
+                            Spacer()
+                            Text("00:00.98")
+                                .font(Font.custom("", size: 20))
+                                .listRowSeparatorTint(Color("Dark Gray"))
+                        }
+                        
+                        
+                        HStack{
+                            Text("Lap 4")
+                                .font(Font.custom("", size: 20))
+                                .foregroundColor(.red)
+                            Spacer()
+                            Text("00:04.08")
+                                .foregroundColor(.red)
+                                .font(Font.custom("", size: 20))
+                                .listRowSeparatorTint(Color("Dark Gray"))
+                        }
+                        
+                        
+                        HStack{
+                            Text("Lap 3")
+                                .font(Font.custom("", size: 20))
+                                .foregroundColor(.green)
+                            Spacer()
+                            Text("00:00.96")
+                                .foregroundColor(.green)
+                                .font(Font.custom("", size: 20))
+                                .listRowSeparatorTint(Color("Dark Gray"))
+                        }
+                        
+                        
+                        HStack{
+                            Text("Lap 2")
+                                .font(Font.custom("", size: 20))
+                            Spacer()
+                            Text("00:02.76")
+                                .font(Font.custom("", size: 20))
+                                .listRowSeparatorTint(Color("Dark Gray"))
+                        }
+                        
+                        
+                        HStack{
+                            Text("Lap 1")
+                                .font(Font.custom("", size: 20))
+                            Spacer()
+                            Text("00:01.16")
+                                .font(Font.custom("", size: 20))
+                                .listRowSeparatorTint(Color("Dark Gray"))
+                        }
                     }
                     // remove inset from list items
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    
                 }
                 // set the smount of vertical height we want this list to take up.
                 .frame(height: 300)
