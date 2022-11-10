@@ -63,5 +63,9 @@ struct ContentView_Previews: PreviewProvider {
                     Text("Timer")
                 }
         }
+        // change the accenet colour for the currently active tab item
+        .accentColor(.orange)
+        // ensure tab items that are not active are visable
+        .preferredColorScheme(.dark)
     }
 }
