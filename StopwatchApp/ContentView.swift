@@ -18,6 +18,9 @@ struct ContentView: View {
             // Second layer rest of interfacce
             
             VStack {
+                
+                Spacer()
+                
                 Text("00:09.96")
                     .font(Font.system(size: 90, weight: .thin))
                     .foregroundColor(.white)
@@ -30,6 +33,23 @@ struct ContentView: View {
                     
                     CircleButtonView(buttonColor: Color("Dark Green"), lable: "Start", labelColor: .green)
                 }
+                // list of items
+                List{
+                    
+                    Group{
+                        Text("1")
+                        Text("2")
+                        Text("3")
+                        Text("4")
+                        Text("5")
+                    }
+                    // remove inset from list items
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
+                // set the smount of vertical height we want this list to take up.
+                .frame(height: 300)
+                // adjust list style
+                .listStyle(.plain)
             }
             .padding()
         }
@@ -44,24 +64,28 @@ struct ContentView_Previews: PreviewProvider {
                     Image(systemName: "globe")
                     Text("World clock")
                 }
+                .tag(1)
             
             Text("Alarm")
                 .tabItem{
                     Image(systemName: "alarm.fill")
                     Text("Alarm")
                 }
+                .tag(2)
             
             ContentView()
                 .tabItem{
                     Image(systemName: "stopwatch.fill")
                     Text("Stopwatch")
                 }
+                .tag(3)
             
             Text("Timer")
                 .tabItem{
                     Image(systemName: "timer")
                     Text("Timer")
                 }
+                .tag(4)
         }
         // change the accenet colour for the currently active tab item
         .accentColor(.orange)
