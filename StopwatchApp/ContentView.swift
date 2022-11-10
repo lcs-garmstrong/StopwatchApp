@@ -37,11 +37,18 @@ struct ContentView: View {
                 List{
                     
                     Group{
-                        Text("1")
-                        Text("2")
-                        Text("3")
-                        Text("4")
-                        Text("5")
+                        Text("Lap 5")
+                            .listRowSeparatorTint(Color("Dark Gray"))
+                        Text("Lap 4")
+                            .listRowSeparatorTint(Color("Dark Gray"))
+                            .foregroundColor(.red)
+                        Text("Lap 3")
+                            .listRowSeparatorTint(Color("Dark Gray"))
+                            .foregroundColor(.green)
+                        Text("Lap 2")
+                            .listRowSeparatorTint(Color("Dark Gray"))
+                        Text("Lap 1")
+                            .listRowSeparatorTint(Color("Dark Gray"))
                     }
                     // remove inset from list items
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
