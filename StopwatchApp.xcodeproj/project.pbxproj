@@ -12,6 +12,7 @@
 		97C79A82291BEC8D00614CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C79A81291BEC8D00614CFA /* Assets.xcassets */; };
 		97C79A85291BEC8D00614CFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C79A84291BEC8D00614CFA /* Preview Assets.xcassets */; };
 		97C79A8C291BF14700614CFA /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C79A8B291BF14700614CFA /* CircleButtonView.swift */; };
+		97C79A8E2921636600614CFA /* StopwatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C79A8D2921636600614CFA /* StopwatchListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		97C79A81291BEC8D00614CFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C79A84291BEC8D00614CFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97C79A8B291BF14700614CFA /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		97C79A8D2921636600614CFA /* StopwatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +57,10 @@
 			children = (
 				97C79A7D291BEC8B00614CFA /* StopwatchAppApp.swift */,
 				97C79A7F291BEC8B00614CFA /* ContentView.swift */,
+				97C79A8B291BF14700614CFA /* CircleButtonView.swift */,
+				97C79A8D2921636600614CFA /* StopwatchListView.swift */,
 				97C79A81291BEC8D00614CFA /* Assets.xcassets */,
 				97C79A83291BEC8D00614CFA /* Preview Content */,
-				97C79A8B291BF14700614CFA /* CircleButtonView.swift */,
 			);
 			path = StopwatchApp;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				97C79A8C291BF14700614CFA /* CircleButtonView.swift in Sources */,
 				97C79A80291BEC8B00614CFA /* ContentView.swift in Sources */,
+				97C79A8E2921636600614CFA /* StopwatchListView.swift in Sources */,
 				97C79A7E291BEC8B00614CFA /* StopwatchAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

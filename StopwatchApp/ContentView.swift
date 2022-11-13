@@ -35,60 +35,17 @@ struct ContentView: View {
                 }
                 // list of items
                 List{
-                    
-                    Group{
-                        HStack{
-                            Text("Lap 5")
-                                .font(Font.custom("", size: 20))
-                            Spacer()
-                            Text("00:00.98")
-                                .font(Font.custom("", size: 20))
-                                .listRowSeparatorTint(Color("Dark Gray"))
-                        }
+                    Group {
+                        StopwatchListView(lapNumber: "Lap 5", lapTime: "00:00.98", lapColor: .white)
                         
+                        StopwatchListView(lapNumber: "Lap 4", lapTime: "00:04.08", lapColor: .red)
                         
-                        HStack{
-                            Text("Lap 4")
-                                .font(Font.custom("", size: 20))
-                                .foregroundColor(.red)
-                            Spacer()
-                            Text("00:04.08")
-                                .foregroundColor(.red)
-                                .font(Font.custom("", size: 20))
-                                .listRowSeparatorTint(Color("Dark Gray"))
-                        }
+                        StopwatchListView(lapNumber: "Lap 3", lapTime: "00:00.96", lapColor: .green)
                         
+                        StopwatchListView(lapNumber: "Lap 2", lapTime: "00:02.76", lapColor: .white)
                         
-                        HStack{
-                            Text("Lap 3")
-                                .font(Font.custom("", size: 20))
-                                .foregroundColor(.green)
-                            Spacer()
-                            Text("00:00.96")
-                                .foregroundColor(.green)
-                                .font(Font.custom("", size: 20))
-                                .listRowSeparatorTint(Color("Dark Gray"))
-                        }
+                        StopwatchListView(lapNumber: "Lap 1", lapTime: "00:01.16", lapColor: Color(.white))
                         
-                        
-                        HStack{
-                            Text("Lap 2")
-                                .font(Font.custom("", size: 20))
-                            Spacer()
-                            Text("00:02.76")
-                                .font(Font.custom("", size: 20))
-                                .listRowSeparatorTint(Color("Dark Gray"))
-                        }
-                        
-                        
-                        HStack{
-                            Text("Lap 1")
-                                .font(Font.custom("", size: 20))
-                            Spacer()
-                            Text("00:01.16")
-                                .font(Font.custom("", size: 20))
-                                .listRowSeparatorTint(Color("Dark Gray"))
-                        }
                     }
                     // remove inset from list items
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
