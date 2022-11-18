@@ -15,7 +15,7 @@ struct AlarmView: View {
                 Color.black
                     .ignoresSafeArea()
                 
-                VStack(alignment: .leading){
+                VStack(alignment: .leading, spacing: 10){
                     Text("Alarm")
                         .font(Font.system(size: 40, weight: .bold))
                     
@@ -24,7 +24,7 @@ struct AlarmView: View {
                             HStack{
                                 Image(systemName: "bed.double.fill")
                                     .bold()
-                                Text("Sleep")
+                                Text("Sleep ")
                                     .font(Font.system(size: 20, weight: .bold))
                                 Text("Wake Up")
                                     .font(Font.system(size: 20, weight: .bold))
@@ -48,9 +48,10 @@ struct AlarmView: View {
                                         .cornerRadius(100)
                                 }
                             }
-                            
                             Spacer()
+                                .listRowSeparator(.hidden)
                             Text("Other")
+                                
                                 .font(Font.system(size: 20, weight: .bold))
                             
                             AlarmListsView(toggelSwitch: false, time: "5:07", hour: "AM", timeColor: .gray)
@@ -62,7 +63,7 @@ struct AlarmView: View {
                             AlarmListsView(toggelSwitch: false, time: "3:45", hour: "PM", timeColor: .gray)
                             
                         }
-                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                     }
                     .listStyle(.plain)
                 }
@@ -72,10 +73,12 @@ struct AlarmView: View {
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     Text("Edit")
+                        .font(Font.system(size: 20, weight: .regular ))
                         .foregroundColor(.orange)
                 }
                 ToolbarItem(placement: .primaryAction){
                     Image(systemName: "plus")
+                        .font(Font.system(size: 20, weight: .regular ))
                         .foregroundColor(.orange)
                 }
             }
