@@ -62,7 +62,7 @@ struct AlarmView: View {
                             AlarmListsView(toggelSwitch: false, time: "3:45", hour: "PM", timeColor: .gray)
                             
                         }
-                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                     }
                     .listStyle(.plain)
                 }
