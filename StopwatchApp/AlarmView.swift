@@ -44,27 +44,31 @@ struct AlarmView: View {
                                         .font(Font.system(size: 17.5, weight: .medium))
                                         .foregroundColor(.orange)
                                         .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                                        .background(.gray)
+                                        .background(Color("Dark Gray"))
                                         .cornerRadius(100)
                                 }
                             }
                             
+                            Spacer()
                             Text("Other")
                                 .font(Font.system(size: 20, weight: .bold))
                             
-                            VStack (alignment: .leading){
-                                HStack(alignment: .firstTextBaseline){
-                                    Text("5:07")
-                                        .font(Font.system(size: 60, weight: .light))
-                                    Text("AM")
-                                        .font(Font.system(size: 35, weight: .light))
-                                }
-                                .foregroundColor(.gray)
-                                Text("Alarm")
+                            HStack{
+                                VStack (alignment: .leading){
+                                    Toggle(isOn: .constant(true)) {
+                                    HStack(alignment: .firstTextBaseline){
+                                            Text("5:07")
+                                                .font(Font.system(size: 60, weight: .light))
+                                            Text("AM")
+                                                .font(Font.system(size: 35, weight: .light))
+                                        }
+                                    }
                                     .foregroundColor(.gray)
-                                
+                                    Text("Alarm")
+                                        .foregroundColor(.gray)
+                                }
                             }
-                            
+                            .padding(.trailing, 50)
                         }
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
