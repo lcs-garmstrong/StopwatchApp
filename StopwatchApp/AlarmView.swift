@@ -39,9 +39,14 @@ struct AlarmView: View {
                                         .foregroundColor(.gray)
                                 }
                                 Spacer()
-                                Text("CHANGE")
-                                    .foregroundColor(.orange)
-                                    .fontWeight(.bold)
+                                Button(action: {}) {
+                                    Text("CHANGE")
+                                        .font(Font.system(size: 17.5, weight: .medium))
+                                        .foregroundColor(.orange)
+                                        .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                                        .background(.gray)
+                                        .cornerRadius(100)
+                                }
                             }
                             
                             Text("Other")
@@ -54,13 +59,14 @@ struct AlarmView: View {
                                     Text("AM")
                                         .font(Font.system(size: 35, weight: .light))
                                 }
-                                    .foregroundColor(.gray)
+                                .foregroundColor(.gray)
                                 Text("Alarm")
                                     .foregroundColor(.gray)
                                 
                             }
                             
                         }
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     .listStyle(.plain)
                 }
