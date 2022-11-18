@@ -17,20 +17,52 @@ struct AlarmView: View {
                 
                 VStack(alignment: .leading){
                     Text("Alarm")
-                    HStack{
-                        Image(systemName: "bed.double")
-                        Text("Sleep")
-                        Text("Wake Up")
-                    }
+                        .font(Font.system(size: 40, weight: .bold))
+                    
                     List{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("No Alarm")
-                                Text("Tomorrow Morning")
+                        Group{
+                            HStack{
+                                Image(systemName: "bed.double")
+                                    .bold()
+                                Text("Sleep")
+                                    .bold()
+                                Text("Wake Up")
+                                    .bold()
+                            }
+                            
+                            HStack{
+                                VStack(alignment: .leading){
+                                    Text("No Alarm")
+                                        .font(Font.system(size: 50, weight: .light))
+                                        .foregroundColor(.gray)
+                                    Text("Tomorrow Morning")
+                                        .foregroundColor(.gray)
+                                }
+                                Spacer()
+                                Text("CHANGE")
+                                    .foregroundColor(.orange)
+                                    .fontWeight(.bold)
+                            }
+                            
+                            Text("Other")
+                                .font(Font.system(size: 20, weight: .bold))
+                            
+                            VStack (alignment: .leading){
+                                HStack(alignment: .firstTextBaseline){
+                                    Text("5:07")
+                                        .font(Font.system(size: 60, weight: .light))
+                                    Text("AM")
+                                        .font(Font.system(size: 35, weight: .light))
+                                }
+                                    .foregroundColor(.gray)
+                                Text("Alarm")
+                                    .foregroundColor(.gray)
+                                
                             }
                             
                         }
                     }
+                    .listStyle(.plain)
                 }
                 .padding()
             }
@@ -38,9 +70,11 @@ struct AlarmView: View {
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     Text("Edit")
+                        .foregroundColor(.orange)
                 }
                 ToolbarItem(placement: .primaryAction){
                     Image(systemName: "plus")
+                        .foregroundColor(.orange)
                 }
             }
         }
