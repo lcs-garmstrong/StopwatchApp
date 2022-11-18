@@ -53,22 +53,9 @@ struct AlarmView: View {
                             Text("Other")
                                 .font(Font.system(size: 20, weight: .bold))
                             
-                            HStack{
-                                VStack (alignment: .leading){
-                                    Toggle(isOn: .constant(true)) {
-                                    HStack(alignment: .firstTextBaseline){
-                                            Text("5:07")
-                                                .font(Font.system(size: 60, weight: .light))
-                                            Text("AM")
-                                                .font(Font.system(size: 35, weight: .light))
-                                        }
-                                    }
-                                    .foregroundColor(.gray)
-                                    Text("Alarm")
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            .padding(.trailing, 50)
+                            AlarmListsView(toggelSwitch: true, time: "5:07", hour: "AM", timeColor: .gray)
+                            
+                            
                         }
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }

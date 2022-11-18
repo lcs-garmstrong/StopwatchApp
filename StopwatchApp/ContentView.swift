@@ -71,7 +71,7 @@ struct ContentView_Previews: PreviewProvider {
                 }
                 .tag(1)
             
-            Text("Alarm")
+            AlarmView()
                 .tabItem{
                     Image(systemName: "alarm.fill")
                     Text("Alarm")
