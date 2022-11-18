@@ -22,12 +22,12 @@ struct AlarmView: View {
                     List{
                         Group{
                             HStack{
-                                Image(systemName: "bed.double")
+                                Image(systemName: "bed.double.fill")
                                     .bold()
                                 Text("Sleep")
-                                    .bold()
+                                    .font(Font.system(size: 20, weight: .bold))
                                 Text("Wake Up")
-                                    .bold()
+                                    .font(Font.system(size: 20, weight: .bold))
                             }
                             
                             HStack{
@@ -53,8 +53,13 @@ struct AlarmView: View {
                             Text("Other")
                                 .font(Font.system(size: 20, weight: .bold))
                             
-                            AlarmListsView(toggelSwitch: true, time: "5:07", hour: "AM", timeColor: .gray)
+                            AlarmListsView(toggelSwitch: false, time: "5:07", hour: "AM", timeColor: .gray)
                             
+                            AlarmListsView(toggelSwitch: true, time: "7:13", hour: "AM", timeColor: .white)
+                            
+                            AlarmListsView(toggelSwitch: true, time: "1:08", hour: "PM", timeColor: .white)
+                            
+                            AlarmListsView(toggelSwitch: false, time: "3:45", hour: "PM", timeColor: .gray)
                             
                         }
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))

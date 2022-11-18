@@ -26,8 +26,9 @@ struct AlarmListsView: View {
                         Text(hour)
                             .font(Font.system(size: 35, weight: .light))
                     }
+                    Text("Alarm")
                 }
-                Text("Alarm")
+                
             }
             .foregroundColor(timeColor)
         }
